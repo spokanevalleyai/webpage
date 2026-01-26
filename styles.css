@@ -99,11 +99,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================================
+   Top Bar
+   ======================================== */
+.top-bar {
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: 8px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+}
+
+.top-bar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.top-bar a {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    transition: color var(--transition-fast);
+}
+
+.top-bar a:hover {
+    color: var(--color-accent);
+}
+
+.top-bar-divider {
+    color: var(--color-border-light);
+    font-size: 0.75rem;
+}
+
+/* ========================================
    Navigation
    ======================================== */
 .nav {
     position: fixed;
-    top: 0;
+    top: 33px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -960,6 +999,14 @@ section {
 }
 
 @media (max-width: 768px) {
+    .top-bar {
+        display: none;
+    }
+    
+    .nav {
+        top: 0;
+    }
+    
     section {
         padding: 70px 0;
     }
