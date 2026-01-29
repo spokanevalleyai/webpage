@@ -345,6 +345,29 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-text-muted);
 }
 
+.btn-evidence {
+    align-self: center;
+    padding: 12px 24px;
+}
+
+/* Evidence Page */
+.evidence-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.evidence-page h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.evidence-page p {
+    color: var(--color-text-secondary);
+    font-size: 1.2rem;
+}
+
 /* ========================================
    Buttons
    ======================================== */
