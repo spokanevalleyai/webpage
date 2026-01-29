@@ -353,19 +353,105 @@ h1, h2, h3, h4, h5, h6 {
 /* Evidence Page */
 .evidence-page {
     min-height: 80vh;
-    display: flex;
-    align-items: center;
     padding-top: 150px;
+    padding-bottom: 80px;
 }
 
-.evidence-page h1 {
-    font-size: 3rem;
+.evidence-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.evidence-header h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     margin-bottom: 20px;
 }
 
-.evidence-page p {
+.evidence-header p {
     color: var(--color-text-secondary);
     font-size: 1.2rem;
+}
+
+.evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.evidence-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-base);
+    display: block;
+}
+
+.evidence-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+}
+
+.evidence-card:hover .evidence-stat {
+    color: var(--color-accent-light);
+}
+
+.evidence-stat {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    transition: color var(--transition-fast);
+}
+
+.evidence-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.evidence-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: var(--color-text-primary);
+}
+
+.evidence-card p {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.evidence-source {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    padding: 6px 12px;
+    background: var(--color-surface);
+    border-radius: var(--radius-full);
+}
+
+.evidence-cta {
+    text-align: center;
+    padding: 40px;
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+}
+
+.evidence-cta p {
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }
 
 /* ========================================
